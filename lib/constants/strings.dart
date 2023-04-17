@@ -1,0 +1,2 @@
+
+const kAppTitle = 'Drift Demo';
