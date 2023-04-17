@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: kAppTitle,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.green, // TODO: CREATE A CONSTANT , EXPORT THEME CODE INTO A CONSTANT 
       ),
       home: const HomePage(),
     );
