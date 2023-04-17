@@ -1,10 +1,25 @@
 # demo_drift_package
 
-A new Flutter project.
+Basic note taking app Flutter project, using Drift package for local data storage.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a demo. Project is meant to accompany the Flutter chicago talk on April 24th on local data storage using the Drift package.
+
+## Steps covered in talk 
+1 -     flutter create project 
+2 -     setup project basics
+3 -     run through of demo mvp and app design
+4 -     setup of boiler plate code for app
+5 -     Drift setup and use   
+
+## Steps to setup local data storage using Drift
+1 -     Choose state management system 
+2 -     Setup drift_db file
+3 -     Generate drift .g file 
+4 -     Use local data storage 
+5 -     Check database in your project 
+
 
 A few resources to get you started if this is your first Flutter project:
 
