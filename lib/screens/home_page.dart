@@ -55,14 +55,17 @@ Expanded(
                   },
                 ),
 
-    // LISTVIEW - 
+    // LISTVIEW - vertical scroll, contains todo items
     Expanded(
   child:   ListView(
     scrollDirection: Axis.vertical,
-  //TODO: Add dummy pictures for this basic suite 
+//TODO: BUILD TODO LIST VIEW 
+// MAKE ALL CODE HERE, AND 
+//IF it were a a project-> extract into its own widget file
+//TODO: COPY LIST VIEW LETTERS(LETTERS TO SANTA) TO USE CRUD FOR DEMO 
   ),
 ),
-    //TODO: FLOATING ACTION BUTTON IN SCAFFOLD  
+   
 
  ],
   
