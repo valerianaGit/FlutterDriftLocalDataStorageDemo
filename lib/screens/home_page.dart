@@ -17,44 +17,40 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-body: 
-Column(
- children: [
-  // TEXTFIELD to enter todo item
-  // TODO: Share Tutorial for wrap around text 
-Expanded(
-  child:   TextField(
-  //wrap textfield in Expanded widget + maxlines null == scrollable
-    textCapitalization: TextCapitalization.words,
-        controller: txtController,
-        maxLines: null, //wrap text
-        autofocus: true,
-        autocorrect: true,
-        cursorColor: kCursorColor,
-        decoration: const InputDecoration(
-          border: OutlineInputBorder(),
-          labelText: kAppTitle,
-        ),
-        onChanged: (newValue) {
-          newContent = newValue;
-        },
-  ),
-),
-    // CHECK DATABASE BUTTON 
-    // DELETE this button for deployment
-                ElevatedButton(
-                  child: const Text('Check database'),
-                  onPressed: () {
-                    //TODO: Update info to check database without a dedicated viewer
-                    // can you use this just for drift
-                    // or can we use it to read any sql database right from the emulator or device?
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => DriftDbViewer(database)
-                        )
-                        );
-                    
-                  },
-                ),
+      body: Column(
+        children: [
+          // TEXTFIELD to enter todo item
+          // TODO: Share Tutorial for wrap around text
+          //TODO: Share tutorial on using chose widget , between a textfield and a textview , like in letter to santa (letter_screen)
+          Expanded(
+            child: TextField(
+              //wrap textfield in Expanded widget + maxlines null == scrollable
+              controller: txtController, // need a controller to clear textfield once we use the save button
+              maxLines: null, //wrap text
+              autofocus: true,
+              autocorrect: true,
+              cursorColor: kCursorColor,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: kAppTitle,
+              ),
+              onChanged: (newValue) {
+                newContent = newValue;
+              },
+            ),
+          ),
+          // CHECK DATABASE BUTTON
+          // DELETE this button for deployment
+          ElevatedButton(
+            child: const Text('Check database'),
+            onPressed: () {
+              //TODO: Update info to check database without a dedicated viewer
+              // can you use this just for drift
+              // or can we use it to read any sql database right from the emulator or device?
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => DriftDbViewer(database)));
+            },
+          ),
 
     // LISTVIEW - vertical scroll, contains todo items
     Expanded(
