@@ -17,7 +17,6 @@ class TodoItemCard extends StatelessWidget {
           elevation: 5.0,
           color: kdarkColor,
           child: Container(
-            alignment: Alignment.center,
             child: Text(content,
             style: kTodoItemCardStyle,
               ),
