@@ -52,17 +52,18 @@ class _HomePageState extends State<HomePage> {
             },
           ),
 
-    // LISTVIEW - vertical scroll, contains todo items
-    Expanded(
-  child:   ListView(
-    scrollDirection: Axis.vertical,
-//TODO: BUILD TODO LIST VIEW 
-// MAKE ALL CODE HERE, AND 
+          // LISTVIEW - vertical scroll, contains todo items
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.vertical,
+//TODO: BUILD TODO LIST VIEW
+// MAKE ALL CODE HERE, AND
 //IF it were a a project-> extract into its own widget file
-//TODO: COPY LIST VIEW LETTERS(LETTERS TO SANTA) TO USE CRUD FOR DEMO 
-  ),
-),
-   
+//TODO: COPY LIST VIEW LETTERS(LETTERS TO SANTA) TO USE CRUD FOR DEMO
+            ),
+          ),
+        ],
+      ),
 
  ],
   
