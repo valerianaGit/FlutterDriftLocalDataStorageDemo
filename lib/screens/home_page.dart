@@ -10,6 +10,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String newContent = '';
+  var txtController = TextEditingController(); // TODO: What are these for?
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
