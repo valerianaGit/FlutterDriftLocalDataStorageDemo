@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:demo_drift_package/constants/strings.dart';
+import 'package:demo_drift_package/constants/constants.dart';
+//TODO: use riverpod or provider for state management 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
