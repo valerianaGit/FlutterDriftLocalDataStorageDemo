@@ -11,10 +11,12 @@ This project is a demo. Project is meant to accompany the Flutter chicago talk o
 2 -     setup project basics
 3 -     run through of demo mvp and app design
 4 -     setup of boiler plate code for app
+4.1.    Screenshot of code needed to write on textfield 
+        and update table view without saving data 
 5 -     Drift setup and use   
 
 ## Steps to setup local data storage using Drift
-1 -     Choose state management system 
+1 -     Choose state management system - riverpod
 2 -     Setup drift_db file
 3 -     Generate drift .g file 
 4 -     Use local data storage 
