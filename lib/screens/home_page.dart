@@ -72,7 +72,9 @@ children: todoList, //TODO: CREATE WIDGET
       ),
       // FLOATING ACTION BUTTON IN SCAFFOLD
       //- save text input and update listView
-      floatingActionButton: FloatingActionButton(onPressed: () {
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.check),
+        onPressed: () {
         // Save TEXTFIELD INPUT into database AND update tableview
 
         // Append value of newContent to list 
