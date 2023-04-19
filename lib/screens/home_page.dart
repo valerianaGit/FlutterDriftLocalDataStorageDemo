@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:demo_drift_package/constants/strings.dart';
 import 'package:demo_drift_package/constants/constants.dart';
+import 'package:demo_drift_package/widgets/todoItemCard.dart';
 
 //TODO: use riverpod or provider for state management
 class HomePage extends StatefulWidget {
@@ -13,7 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String newContent = ''; // textfield content 
   var txtController = TextEditingController();
-  var todoList = <String>[]; // String array, will hold todo list items 
+  var todoList = <TodoItemCard>[]; // String array, will hold todo list items 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
                 border: OutlineInputBorder(),
                 labelText: kAppTitle,
               ),
+              //TODO: There might be something better to use rather than onchanged? 
               onChanged: (newValue) {
                 newContent = newValue;
               },
@@ -54,9 +56,10 @@ class _HomePageState extends State<HomePage> {
 
           // LISTVIEW - vertical scroll, contains todo items
           Expanded(
+            //Use listview.builder to create children lazily , as necessary
             child: ListView(
               scrollDirection: Axis.vertical,
-//TODO: BUILD TODO LIST VIEW
+children: todoList, //TODO: CREATE WIDGET 
 // MAKE ALL CODE HERE, AND
 //IF it were a a project-> extract into its own widget file
 //TODO: COPY LIST VIEW LETTERS(LETTERS TO SANTA) TO USE CRUD FOR DEMO
@@ -70,7 +73,7 @@ class _HomePageState extends State<HomePage> {
         // Save TEXTFIELD INPUT into database AND update tableview
 
         // Append value of newContent to list 
-       todoList.add(newContent);
+       todoList.add(TodoItemCard(content: newContent));
         
         // Clear textfield
         txtController.clear();
