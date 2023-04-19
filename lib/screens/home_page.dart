@@ -15,11 +15,24 @@ body:
 Column(
  children: [
   // TEXTFIELD to enter todo item
-TextField(
-  textCapitalization: TextCapitalization.words,
-  onTap:() {
-    //
-  },
+  // TODO: Share Tutorial for wrap around text 
+Expanded(
+  child:   TextField(
+  //wrap textfield in Expanded widget + maxlines null == scrollable
+    textCapitalization: TextCapitalization.words,
+        controller: txtController,
+        maxLines: null, //wrap text
+        autofocus: true,
+        autocorrect: true,
+        cursorColor: kCursorColor,
+        decoration: const InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: kAppTitle,
+        ),
+        onChanged: (newValue) {
+          newContent = newValue;
+        },
+  ),
 ),
     // CHECK DATABASE BUTTON 
     // DELETE this button for deployment
