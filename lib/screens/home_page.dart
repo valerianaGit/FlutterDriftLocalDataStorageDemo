@@ -64,21 +64,20 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      // FLOATING ACTION BUTTON IN SCAFFOLD
+      //- save text input and update listView
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        // Save TEXTFIELD INPUT into database AND update tableview
 
- ],
-  
+        // Append value of newContent to list 
+       todoList.add(newContent);
+        
+        // Clear textfield
+        txtController.clear();
 
-),
- // FLOATING ACTION BUTTON IN SCAFFOLD 
- //- save text input and update listView
- floatingActionButton: 
- FloatingActionButton(
-  onPressed: () {
-    // TODO: Save TEXTFIELD INPUT and update tableview
-    // 
-  }
-  ),
+        //from letters to santa -  save button action with -> letter_screen.dart
+    
+      }),
     );
-
   }
 }
