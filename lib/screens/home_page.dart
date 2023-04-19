@@ -11,9 +11,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String newContent = '';
-  var txtController = TextEditingController(); // TODO: What are these for?
-
+  String newContent = ''; // textfield content 
+  var txtController = TextEditingController();
+  var todoList = <String>[]; // String array, will hold todo list items 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
