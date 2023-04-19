@@ -41,6 +41,9 @@ Expanded(
                 ElevatedButton(
                   child: const Text('Check database'),
                   onPressed: () {
+                    //TODO: Update info to check database without a dedicated viewer
+                    // can you use this just for drift
+                    // or can we use it to read any sql database right from the emulator or device?
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => DriftDbViewer(database)
                         )
