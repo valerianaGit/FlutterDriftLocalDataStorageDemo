@@ -41,16 +41,16 @@ class _HomePageState extends State<HomePage> {
           ),
           // CHECK DATABASE BUTTON
           // DELETE this button for deployment
-          ElevatedButton(
-            child: const Text('Check database'),
-            onPressed: () {
-              //TODO: Update info to check database without a dedicated viewer
-              // can you use this just for drift
-              // or can we use it to read any sql database right from the emulator or device?
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => DriftDbViewer(database)));
-            },
-          ),
+          // ElevatedButton(
+          //   child: const Text('Check database'),
+          //   onPressed: () {
+          //     //TODO: Update info to check database without a dedicated viewer
+          //     // can you use this just for drift
+          //     // or can we use it to read any sql database right from the emulator or device?
+          //     Navigator.of(context).push(MaterialPageRoute(
+          //         builder: (context) => DriftDbViewer(database)));
+          //   },
+          // ),
 
           // LISTVIEW - vertical scroll, contains todo items
           Expanded(
