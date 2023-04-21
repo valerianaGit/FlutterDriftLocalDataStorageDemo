@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   riverpod: ^2.3.5
   drift: ^2.7.0
+  sqlite3_flutter_libs: ^0.5.13
 
 dev_dependencies:
   flutter_test:
