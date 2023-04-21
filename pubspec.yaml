@@ -38,6 +38,7 @@ dependencies:
   riverpod: ^2.3.5
   drift: ^2.7.0
   sqlite3_flutter_libs: ^0.5.13
+  path_provider: ^2.0.14
 
 dev_dependencies:
   flutter_test:
