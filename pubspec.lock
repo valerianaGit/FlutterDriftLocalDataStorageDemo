@@ -123,6 +123,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.2"
+  riverpod:
+    dependency: "direct main"
+    description:
+      name: riverpod
+      sha256: ec5641067d111681ef825754d1327565c987985c7cb52e09bc867b78248854b2
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.5"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -144,6 +152,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.0"
+  state_notifier:
+    dependency: transitive
+    description:
+      name: state_notifier
+      sha256: "8fe42610f179b843b12371e40db58c9444f8757f8b69d181c97e50787caed289"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.2+1"
   stream_channel:
     dependency: transitive
     description:
