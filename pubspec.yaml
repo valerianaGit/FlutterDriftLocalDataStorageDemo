@@ -44,6 +44,8 @@ dependencies:
   drift_db_viewer: ^2.0.0
 
 dev_dependencies:
+  drift_dev: ^2.2.0+1
+  build_runner: ^2.2.1
   flutter_test:
     sdk: flutter
 
