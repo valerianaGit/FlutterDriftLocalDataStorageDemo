@@ -18,9 +18,10 @@ class HomePage extends ConsumerStatefulWidget {
 class HomePageState extends ConsumerState<HomePage> {
   String newContent = ''; // textfield content
   var txtController = TextEditingController();
-  var todoList = <TodoItemCard>[TodoItemCard(content: 'hello'), TodoItemCard(content: 'number 2 ')]; // String array, will hold todo list items
+
   @override
   Widget build(BuildContext context) {
+    final database = ref.watch(todoDBProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text(kAppTitle),
