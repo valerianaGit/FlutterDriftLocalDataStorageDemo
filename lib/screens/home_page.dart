@@ -53,33 +53,22 @@ class HomePageState extends ConsumerState<HomePage> {
                   },
                 ),
               ),
-              // CHECK DATABASE BUTTON
-              // DELETE this button for deployment
-              // ElevatedButton(
-              //   child: const Text('Check database'),
-              //   onPressed: () {
-              //     //TODO: Update info to check database without a dedicated viewer
-              //     // can you use this just for drift
-              //     // or can we use it to read any sql database right from the emulator or device?
-              //     Navigator.of(context).push(MaterialPageRoute(
-              //         builder: (context) => DriftDbViewer(database)));
-              //   },
-              // ),
+// CHECK DATABASE BUTTON
+// DELETE this button for deployment
+              ElevatedButton(
+                child: const Text('Check database'),
+                onPressed: () {
+                  //TODO: Update info to check database without a dedicated viewer
+                  // can you use this just for drift
+                  // or can we use it to read any sql database right from the emulator or device?
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => DriftDbViewer(database)));
+                },
+              ),
 
               // LISTVIEW - vertical scroll, contains todo items
-              Expanded( 
-             
-                //Use listview.builder to create children lazily , as necessary, 
-                // this is why list is not updating 
-             
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: todoList, //TODO: CREATE WIDGET
-                    // MAKE ALL CODE HERE, AND
-                    //IF it were a a project-> extract into its own widget file
-                    //TODO: COPY LIST VIEW LETTERS(LETTERS TO SANTA) TO USE CRUD FOR DEMO
-                  ),
-                
+              Expanded(
+                child: TodoListView(),
               ),
             ],
           ),
