@@ -3,15 +3,14 @@ import 'package:demo_drift_package/constants/strings.dart';
 import 'package:demo_drift_package/constants/constants.dart';
 import 'package:demo_drift_package/widgets/todoItemCard.dart';
 
-//TODO: use riverpod or provider for state management
-class HomePage extends StatefulWidget {
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class HomePageState extends ConsumerState<HomePage> {
   String newContent = ''; // textfield content
   var txtController = TextEditingController();
   var todoList = <TodoItemCard>[TodoItemCard(content: 'hello'), TodoItemCard(content: 'number 2 ')]; // String array, will hold todo list items
