@@ -7,7 +7,7 @@ Basic note taking app Flutter project, using Drift package for local data storag
 UI in this project contains:
 - textfield -> to write new notes
 - database button -> button to check database on the device/project
-- listView -> where use can see the todo items that have been added
+- listView -> where user can see the todo items that have been added
 - circular floating action button -> used to save items written in the textfield
 
 User will be able to:
@@ -18,7 +18,7 @@ User will be able to:
 
 ## Getting Started
 
-This project is a demo. Project is meant to accompany the Flutter chicago talk on April 24th on local data storage using the Drift package.
+This project is a demo. This project is meant to accompany the Flutter Chicago talk on April 24th 2023 on local data storage using the Drift package.
 
 ## Steps covered in talk 
 1 -     flutter create project 
@@ -36,15 +36,15 @@ This project is a demo. Project is meant to accompany the Flutter chicago talk o
 4 -     Use local data storage 
 5 -     Check database in your project 
 
+## Packages used in this project 
+
+
 
 ## Additonal Resources for using the Drift package 
 
+Unit Testing Drift databases 
+https://drift.simonbinder.eu/docs/testing/
 
-A few resources to get you started if this is your first Flutter project:
+Testing Riverpod 
+https://riverpod.dev/docs/cookbooks/testing
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
