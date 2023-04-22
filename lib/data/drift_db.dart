@@ -39,11 +39,11 @@ class TodoDatabase extends _$TodoDatabase {
   //READ
   Future<List<Todo>> getAllTodos() => select(todos).get();
    Stream<List<Todo>> watchAllTodos() => select(todos)
-      .watch(); //automatically emits new values when underlying table changes
+      .watch(); //automatically emits new values when  we have underlying table changes
   //UPDATE
   Future updateNewTodo(Todo todo) => update(todos).replace(todo);
   //DELETE
-  Future deletePost(Todo todo) => delete(todos).delete(todo);
+  Future deleteTodo(Todo todo) => delete(todos).delete(todo);
 
 }
 
