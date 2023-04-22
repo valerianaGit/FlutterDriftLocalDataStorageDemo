@@ -94,13 +94,18 @@ class HomePageState extends ConsumerState<HomePage> {
 
             // Append value of newContent to list
             print(newContent);
-            todoList.add(TodoItemCard(content: newContent));
-            print(todoList);
+            //TODO: UPDATE TO WORK   todoList.add(TodoItemCard(content: newContent));
+            _saveButtonAction(context, database);
+            //print(todoList);
             // Clear textfield
             txtController.clear();
 
             //from letters to santa -  save button action with -> letter_screen.dart
           }),
     );
+  }
+
+  void _saveButtonAction(BuildContext context, TodoDatabase database) { //private method, can only be used inside the class
+    database.insertNewCompanionTodo(TodosCompanion(content: Value(newContent)));
   }
 }
