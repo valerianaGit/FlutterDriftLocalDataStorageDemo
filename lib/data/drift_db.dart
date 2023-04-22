@@ -34,7 +34,7 @@ class TodoDatabase extends _$TodoDatabase {
   //CREATE
   Future insertNewTodo(Todo todo) => into(todos).insert(todo);
    //Create using post companion -  to create post since id is an autoincrement and cannot be entered manually
-   
+
 }
 
 LazyDatabase _openConnection() {
@@ -52,3 +52,4 @@ LazyDatabase _openConnection() {
 }
 
 //TODO: CREATE A VISUAL COMMENT HERE  OF WHAT THE TABLE WILL LOOK LIKE
+// TODO: CREATE TUTORIAL USING ALL ITEMS IN A DATBASE THAT LETTERS TO SANTA USES 
