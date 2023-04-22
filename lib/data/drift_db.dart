@@ -33,7 +33,17 @@ class TodoDatabase extends _$TodoDatabase {
   //QUERIES
   //CREATE
   Future insertNewTodo(Todo todo) => into(todos).insert(todo);
-   //Create using post companion -  to create post since id is an autoincrement and cannot be entered manually
+  //Create using post companion -  to create post since id is an autoincrement and cannot be entered manually
+  Future<int> insertNewCompanionTodo(TodosCompanion todo) =>
+      into(todos).insert(todo);
+  //READ
+  Future<List<Todo>> getAllTodos() => select(todos).get();
+   Stream<List<Todo>> watchAllTodos() => select(todos)
+      .watch(); //automatically emits new values when underlying table changes
+  //UPDATE
+  Future updateNewTodo(Todo todo) => update(todos).replace(todo);
+  //DELETE
+  Future deletePost(Todo todo) => delete(todos).delete(todo);
 
 }
 
