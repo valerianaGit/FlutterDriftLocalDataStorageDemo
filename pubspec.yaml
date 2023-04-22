@@ -41,6 +41,7 @@ dependencies:
   path: ^1.8.2
   flutter_slidable: ^3.0.0
   drift_db_viewer: ^2.0.0
+  flutter_riverpod: ^2.3.5
 
 dev_dependencies:
   drift_dev: ^2.2.0+1
