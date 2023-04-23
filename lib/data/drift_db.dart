@@ -38,8 +38,14 @@ class TodoDatabase extends _$TodoDatabase {
       into(todos).insert(todo);
   //READ
   Future<List<Todo>> getAllTodos() => select(todos).get();
-   Stream<List<Todo>> watchAllTodos() => select(todos)
-      .watch(); //automatically emits new values when  we have underlying table changes
+  Stream<List<Todo>> watchAllTodos() => select(todos).watch(); //automatically emits new values when  we have underlying table changes
+  Stream<Todo>watchTodoWithId(int id) => (select(todos)..where((u) => u.id.equals(id))).watchSingle(); // to be used for testing purposes 
+
+//  Stream<List<Post>> watchInboxForProfile(ProfileData p) {
+//     return (select(posts)..where((tbl) => tbl.receiver.equals(p.sender)))
+//         .watch();
+//   }
+
   //UPDATE
   Future updateNewTodo(Todo todo) => update(todos).replace(todo);
   //DELETE
