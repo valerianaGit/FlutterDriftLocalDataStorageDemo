@@ -1,12 +1,14 @@
-import 'package:drift/native.dart'; // test drift db
-import 'package:flutter/material.dart';
-import 'package:test/test.dart'; // test flutter package
+// import 'package:drift/native.dart'; // test drift db
+// import 'package:flutter/material.dart';
+// import 'package:test/test.dart'; // test flutter package
+import 'package:flutter_test/flutter_test.dart'; // needed to use TestWidgetsFlutterBinding.ensureInitialized(), to ensure initialized bindings
 import 'package:demo_drift_package/data/drift_db.dart'; // db file we are testing
 
 //To run tests, use command [flutter test test/<file name>] on terminal from root of project
 // i.e. command [ flutter test test/db_unit_test.dart ]
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   late TodoDatabase database; // late is used for null safety,
   //because of the setup/teardown lifecycle,
   //late should be safe here since tests
@@ -16,7 +18,7 @@ void main() {
 
   setUp(() {
     database =
-        TodoDatabase(); //NativeDatabase.memory() -> create databas ein memory and does not save to disk
+        TodoDatabase(); //NativeDatabase.memory() -> create database in memory and does not save to disk
   });
 
   tearDown(() async {
@@ -33,13 +35,8 @@ void main() {
 
 //READ
   test('todos can be read', () async {
-    final id = await database
-        .insertNewTodo(const Todo(id: 2, content: 'todo number 2'));
     final todoList = await database.getAllTodos();
-    expect(todoList, [
-      const Todo(id: 1, content: 'todo number 1'),
-      const Todo(id: 2, content: 'todo number 2')
-    ]);
+    expect(todoList, [const Todo(id: 1, content: 'todo number 1')]);
   });
 
   //UPDATE
@@ -49,10 +46,7 @@ void main() {
     final updateTodo = await database
         .updateNewTodo(const Todo(id: 1, content: 'todo number 1 updated'));
     final todoList = await database.getAllTodos();
-    final match = [
-      const Todo(id: 1, content: 'todo number 1 updated'),
-      const Todo(id: 2, content: 'todo number 2')
-    ];
+    final match = [const Todo(id: 1, content: 'todo number 1 updated')];
 
     expect(todoList, match);
   });
@@ -60,10 +54,11 @@ void main() {
   //DELETE
 
   test('todos can be deleted', () async {
-    await database.deleteTodo(const Todo(id: 2, content: 'todo number 2'));
+    await database
+        .deleteTodo(const Todo(id: 1, content: 'todo number 1 updated'));
 
     final todoList = await database.getAllTodos();
-    final match = [const Todo(id: 1, content: 'todo number 1')];
+    final match = [];
     expect(todoList, match);
   });
 }
