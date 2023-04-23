@@ -39,11 +39,23 @@ This project is a demo. This project is meant to accompany the Flutter Chicago t
 ## Packages used in this project 
 
 
+Test 
+-> to do unit and widget tests 
+https://pub.dev/packages/test/install
 
 ## Additonal Resources for using the Drift package 
 
-Unit Testing Drift databases 
+Flutter Unit testing 
+https://docs.flutter.dev/cookbook/testing/unit/introduction
+
+Testing Drift databases 
 https://drift.simonbinder.eu/docs/testing/
+integration tests for real devices 
+unit tests for running and debugging from dev (on computer)
+
+sqlite3 must be installed in system, to create and run unit tests
+-> macOS installed by default ✅
+-> Ubuntu / Windows - check above documentation for instructions to install sqlite3
 
 Testing Riverpod 
 https://riverpod.dev/docs/cookbooks/testing
