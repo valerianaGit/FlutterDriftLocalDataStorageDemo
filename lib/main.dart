@@ -40,3 +40,4 @@ class MyApp extends StatelessWidget {
     //docs -> https://riverpod.dev/docs/concepts/modifiers/auto_dispose
   }
 }
+//TODO: Create tutorial / talk for testing flutter apps 
