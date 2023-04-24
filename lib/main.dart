@@ -31,10 +31,10 @@ class MyApp extends StatelessWidget {
       home: const HomePage(),
     );
     // Check your state management tool for lifecycles (i.e. initialized / alive/ paused/ disposed)
-    //dispose: (context, db) => db.close(),
+    // dispose: (context, db) => db.close(),
     // dispose is a method from Provider,
     // Riverpod has autodispose, used appended in the provider itself
-    //docs -> https://riverpod.dev/docs/concepts/modifiers/auto_dispose
+    // docs -> https://riverpod.dev/docs/concepts/modifiers/auto_dispose
   }
 }
 //TODO: Create tutorial / talk for testing flutter apps 
