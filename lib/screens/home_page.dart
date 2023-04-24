@@ -31,12 +31,12 @@ class HomePageState extends ConsumerState<HomePage> {
           padding: const EdgeInsets.all(32.0),
           child: Column(
             children: [
-              // TEXTFIELD to enter todo item
               // TODO: Share Tutorial for wrap around text
               //TODO: Share tutorial on using chose widget , between a textfield and a textview , like in letter to santa (letter_screen)
+// MARK: UI -> TEXTFIELD to enter todo item
               Expanded(
                 child: TextField(
-                  //wrap textfield in Expanded widget + maxlines null == scrollable
+//wrap textfield in Expanded widget + maxlines null == scrollable
                   controller:
                       txtController, // need a controller to clear textfield once we use the save button
                   maxLines: null, //wrap text
@@ -47,7 +47,8 @@ class HomePageState extends ConsumerState<HomePage> {
                     border: OutlineInputBorder(),
                     labelText: kAppTitle,
                   ),
-                  //TODO: There might be something better to use rather than onchanged?
+//MARK: There might be something better to use rather than onchanged, 
+//like onSubmitted and get this async, but for simplicity we are going with onChanged
                   onChanged: (newValue) {
                     newContent = newValue;
                   },
@@ -58,38 +59,27 @@ class HomePageState extends ConsumerState<HomePage> {
               ElevatedButton(
                 child: const Text('Check database'),
                 onPressed: () {
-                  //TODO: Update info to check database without a dedicated viewer
-                  // can you use this just for drift
-                  // or can we use it to read any sql database right from the emulator or device?
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => DriftDbViewer(database)));
                 },
               ),
 
-              // LISTVIEW - vertical scroll, contains todo items
-              Expanded(
+//MARK: UI -> LISTVIEW - vertical scroll, contains todo items
+              const Expanded(
                 child: TodoListView(),
               ),
             ],
           ),
         ),
       ),
-      // FLOATING ACTION BUTTON IN SCAFFOLD
-      //- save text input and update listView
+//MARK: UI ->  FLOATING ACTION BUTTON IN SCAFFOLD
+//- save text input and update listView
       floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.check),
           onPressed: () {
-            // Save TEXTFIELD INPUT into database AND update tableview
-
-            // Append value of newContent to list
-            print(newContent);
-            //TODO: UPDATE TO WORK   todoList.add(TodoItemCard(content: newContent));
             _saveButtonAction(context, database);
-            //print(todoList);
             // Clear textfield
             txtController.clear();
-
-            //from letters to santa -  save button action with -> letter_screen.dart
           }),
     );
   }
