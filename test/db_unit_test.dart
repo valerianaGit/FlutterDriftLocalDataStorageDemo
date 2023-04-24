@@ -43,7 +43,7 @@ void main() {
   // did not use an update feature on app, but can test it can be done with written queries
   // might be a good idea to update based on ids
   test('todos can be updated', () async {
-    final updateTodo = await database
+await database
         .updateNewTodo(const Todo(id: 1, content: 'todo number 1 updated'));
     final todoList = await database.getAllTodos();
     final match = [const Todo(id: 1, content: 'todo number 1 updated')];
