@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart'; // use riverpod for state management
 import 'package:demo_drift_package/main.dart'; // access dbProvider
-import 'package:demo_drift_package/widgets/todoItemCard.dart'; // use card widget
+import 'package:demo_drift_package/widgets/todo_item_card.dart'; // use card widget
 import 'package:demo_drift_package/data/drift_db.dart'; // Use CRUD Queries  and database
 import 'package:flutter_slidable/flutter_slidable.dart'; //  package used to slide todo items to delete them
 
