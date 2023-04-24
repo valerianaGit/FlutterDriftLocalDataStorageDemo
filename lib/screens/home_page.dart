@@ -31,8 +31,6 @@ class HomePageState extends ConsumerState<HomePage> {
           padding: const EdgeInsets.all(32.0),
           child: Column(
             children: [
-              // TODO: Share Tutorial for wrap around text
-              //TODO: Share tutorial on using chose widget , between a textfield and a textview , like in letter to santa (letter_screen)
 // MARK: UI -> TEXTFIELD to enter todo item
               Expanded(
                 child: TextField(

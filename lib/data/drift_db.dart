@@ -15,7 +15,7 @@ part 'drift_db.g.dart';
 class Todos extends Table {
   IntColumn get id => integer().autoIncrement()();
   TextColumn get content => text()
-      .nullable()(); //TODO: Share tutorial with table with default values and store date, boolean values etc.
+      .nullable()();
 }
 
 //STEP 3 - Create Drift database from table
@@ -66,6 +66,3 @@ LazyDatabase _openConnection() {
   });
   //GOTCHA! -> using Provider package, we would need to dispose, close db on main.dart. Dispose doesn't seem to be necessary using Riverpod
 }
-
-//TODO: CREATE A VISUAL COMMENT HERE  OF WHAT THE TABLE WILL LOOK LIKE
-// TODO: CREATE TUTORIAL USING ALL ITEMS IN A DATBASE THAT LETTERS TO SANTA USES 

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'constants/strings.dart';
 import 'screens/home_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'data/drift_db.dart';
+import 'data/drift_db.dart'; 
 import 'package:flutter/services.dart'; // necessary for device orientation
 
 void main() {
@@ -13,7 +13,6 @@ void main() {
 }
 
 // create provider we will be able to use everywhere on app
-//TODO: TUTORIAL on several different providers on same app, not this one though, not a riverpod tutorial
 final todoDBProvider = Provider.autoDispose((ref) => TodoDatabase()); // autodispose -> avoid unnecessary cost and restore state when provider is no longer in use
 
 class MyApp extends StatelessWidget {
@@ -37,4 +36,3 @@ class MyApp extends StatelessWidget {
     // docs -> https://riverpod.dev/docs/concepts/modifiers/auto_dispose
   }
 }
-//TODO: Create tutorial / talk for testing flutter apps 
