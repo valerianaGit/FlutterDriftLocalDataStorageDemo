@@ -36,9 +36,20 @@ This project is a demo. This project is meant to accompany the Flutter Chicago t
 4 -     Use local data storage 
 5 -     Check database in your project 
 
-## Packages used in this project 
+## Packages used in this project - please check pubspec.yaml for latest information
+### dependencies
+  drift
+  sqlite3_flutter_libs
+  path_provider
+  path
+  flutter_slidable
+  drift_db_viewer
+  flutter_riverpod
 
-
+### dev dependencies
+  drift_dev
+  build_runner
+  flutter_test
 Test 
 -> to do unit and widget tests 
 https://pub.dev/packages/test/install
