@@ -27,10 +27,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       title: kAppTitle,
-      theme: ThemeData(
-        primarySwatch: Colors
-            .green, // TODO: CREATE A CONSTANT , EXPORT THEME CODE INTO A CONSTANT
-      ),
+      theme: ThemeData.dark(),
       home: const HomePage(),
     );
     // Check your state management tool for lifecycles (i.e. initialized / alive/ paused/ disposed)
