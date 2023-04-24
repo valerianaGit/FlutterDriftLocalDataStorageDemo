@@ -14,7 +14,7 @@ void main() {
 
 // create provider we will be able to use everywhere on app
 //TODO: TUTORIAL on several different providers on same app, not this one though, not a riverpod tutorial
-final todoDBProvider = Provider.autoDispose((ref) => TodoDatabase()); // avoid unnecessary cost and restore state when provider is no longer in use
+final todoDBProvider = Provider.autoDispose((ref) => TodoDatabase()); // autodispose -> avoid unnecessary cost and restore state when provider is no longer in use
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
