@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-var kCursorColor = Colors.green[900];
-var kdarkColor = Colors.green;
-var kTodoItemCardStyle = const TextStyle(fontSize: 20.0, color: Colors.black, backgroundColor: Colors.amber);
+var kCursorColor = Colors.teal[900];
+var kdarkColor = Colors.teal;
+var kTodoItemCardStyle = const TextStyle(fontSize: 20.0, color: Colors.white);
