@@ -16,11 +16,9 @@ class TodoItemCard extends StatelessWidget {
         child: Card(
           elevation: 5.0,
           color: kdarkColor,
-          child: Container(
-            child: Text(content,
-            style: kTodoItemCardStyle,
-              ),
-          ),
+          child: Text(content,
+          style: kTodoItemCardStyle,
+            ),
         ),
         ),
     );
