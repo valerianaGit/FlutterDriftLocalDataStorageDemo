@@ -10,17 +10,19 @@ class TodoItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Card(
-          elevation: 5.0,
-          color: kdarkColor,
-          child: Text(content,
-          style: kTodoItemCardStyle,
+    return 
+        SizedBox(
+          width: double.infinity,
+          child: Card(
+            elevation: 20.0,
+            color: kdarkColor,
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(content,
+              style: kTodoItemCardStyle,
+                ),
             ),
-        ),
-        ),
-    );
+          ),
+        );
   }
 }
