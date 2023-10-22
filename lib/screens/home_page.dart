@@ -40,7 +40,6 @@ class HomePageState extends ConsumerState<HomePage> {
                   maxLines: null, //wrap text
                   autofocus: true,
                   autocorrect: true,
-                  cursorColor: kCursorColor,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: kAppTitle,
