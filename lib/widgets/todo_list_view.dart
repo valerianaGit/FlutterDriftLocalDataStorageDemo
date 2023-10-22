@@ -20,18 +20,24 @@ class TodoListViewState extends ConsumerState<TodoListView> {
 // watch all posts in db 
     Stream<List<Todo>> todos =
         database.watchAllTodos();
+//STEP 1 & 2  - Already done on main.dart -> create dependencies for state management and Riverpod provider
+//STEP 3 - USE STREAM BUILDER, to be able to update list and get most up to date info.
+// StreamProvider is a better option for scalability but for the purposes of this demo, StreamBuilder works well
 
-//STEP 3 - USE STREAM BUILDER, to be able to update list and get most up to date info, StreamProvider is a better option for scalability but for the purposes of this demo, builder works well
     return StreamBuilder(
 //STEP 3.A . PASS THE STREAM LIST FROM DATABASE
+
         stream: todos,
 //STEP 3.B . PASS A BUILD CONTEXT ,
         //SNAPSHOT IS THE DATA (OR LACK THEREOFF, if no data is present, handle this case below)
+
         builder: (BuildContext context, AsyncSnapshot<List<Todo>> snapshot) {
 //STEP 4 - CONSUME DATA AND HANDLE NULL VALUES / ERRORS ETC.
+
           return ListView.builder(
             itemBuilder: (context, index) {
 //STEP4.A - IF WE GET DATA
+
               if (snapshot.hasData) {
                 return Slidable(
                   // Specify a key if the Slidable is dismissible.
@@ -66,11 +72,13 @@ class TodoListViewState extends ConsumerState<TodoListView> {
                   ),
                 );
 //STEP4.B - IF WE GET ERROR
+
               } else if (snapshot.hasError) {
                 return TodoItemCard(
                   content: '🚨 Error: ${snapshot.error}',
                 );
 //STEP4.C - IF WE ARE IDLE
+
               } else {
                 return const TodoItemCard(
                   content: 'Loading...', 
