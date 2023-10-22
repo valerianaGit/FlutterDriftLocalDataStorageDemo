@@ -41,9 +41,9 @@ class HomePageState extends ConsumerState<HomePage> {
                   autofocus: true,
                   autocorrect: true,
                   decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: kAppTitle,
-                  ),
+
+                     labelText: kAppTitle,
+                   ),
 //MARK: There might be something better to use rather than onchanged, 
 //like onSubmitted and get this async, but for simplicity we are going with onChanged
                   onChanged: (newValue) {
@@ -60,7 +60,7 @@ class HomePageState extends ConsumerState<HomePage> {
                       builder: (context) => DriftDbViewer(database)));
                 },
               ),
-
+const SizedBox(height: 32.0,),
 //MARK: UI -> LISTVIEW - vertical scroll, contains todo items
               const Expanded(
                 child: TodoListView(),
