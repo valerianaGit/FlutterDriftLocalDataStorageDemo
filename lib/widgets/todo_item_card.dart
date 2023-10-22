@@ -1,4 +1,4 @@
-// Card widet that will be used in the todolist list view to represent each todo item in the list
+// Card widet that will be used in the todolist ListView to represent each todo item in the list
 import 'package:flutter/material.dart';
 import 'package:demo_drift_package/constants/constants.dart';
 
