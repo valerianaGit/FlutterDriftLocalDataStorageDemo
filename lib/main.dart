@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       title: kAppTitle,
       theme: AppThemes().lightTheme,//halloweenTheme,
-      home: HomePage(),
+      home: const HomePage(),
     );
     // Check your state management tool for lifecycles (i.e. initialized / alive/ paused/ disposed)
     // dispose: (context, db) => db.close(),
