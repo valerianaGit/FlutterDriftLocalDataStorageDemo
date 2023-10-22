@@ -2,7 +2,6 @@ import 'package:demo_drift_package/data/drift_db.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_drift_package/main.dart';
 import 'package:demo_drift_package/constants/strings.dart';
-import 'package:demo_drift_package/constants/constants.dart';
 import 'package:demo_drift_package/widgets/todo_list_view.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:drift_db_viewer/drift_db_viewer.dart';
@@ -31,7 +30,6 @@ class HomePageState extends ConsumerState<HomePage> {
           padding: const EdgeInsets.all(32.0),
           child: Column(
             children: [
-// MARK: UI -> TEXTFIELD to enter todo item
               Expanded(
                 child: TextField(
 //wrap textfield in Expanded widget + maxlines null == scrollable
@@ -41,7 +39,6 @@ class HomePageState extends ConsumerState<HomePage> {
                   autofocus: true,
                   autocorrect: true,
                   decoration: const InputDecoration(
-
                      labelText: kAppTitle,
                    ),
 //MARK: There might be something better to use rather than onchanged, 
@@ -52,7 +49,7 @@ class HomePageState extends ConsumerState<HomePage> {
                 ),
               ),
 // CHECK DATABASE BUTTON
-// DELETE this button for deployment
+// MARK: DELETE this button for deployment
               ElevatedButton(
                 child: const Text('Check database'),
                 onPressed: () {
@@ -61,7 +58,6 @@ class HomePageState extends ConsumerState<HomePage> {
                 },
               ),
 const SizedBox(height: 32.0,),
-//MARK: UI -> LISTVIEW - vertical scroll, contains todo items
               const Expanded(
                 child: TodoListView(),
               ),
@@ -69,7 +65,6 @@ const SizedBox(height: 32.0,),
           ),
         ),
       ),
-//MARK: UI ->  FLOATING ACTION BUTTON IN SCAFFOLD
 //- save text input and update listView
       floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.check),
