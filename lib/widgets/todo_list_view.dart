@@ -17,11 +17,11 @@ class TodoListViewState extends ConsumerState<TodoListView> {
   Widget build(BuildContext context) {
     final database = ref.watch(todoDBProvider);
  
-    // watch all posts in db 
+// watch all posts in db 
     Stream<List<Todo>> todos =
         database.watchAllTodos();
 
-//STEP 3 - USE STREAM BUILDER, to be able to update list and get most up to date info
+//STEP 3 - USE STREAM BUILDER, to be able to update list and get most up to date info, StreamProvider is a better option for scalability but for the purposes of this demo, builder works well
     return StreamBuilder(
 //STEP 3.A . PASS THE STREAM LIST FROM DATABASE
         stream: todos,
@@ -84,6 +84,7 @@ class TodoListViewState extends ConsumerState<TodoListView> {
   }
 
   void deleteTodo(BuildContext context, TodoDatabase database, Todo todo) {
+// USE DELETE METHOD
     database.deleteTodo(todo);
   }
 }
