@@ -32,7 +32,7 @@ borderSide: BorderSide(color: Color(0xff171d49),
    ),
   );
 
-  ThemeData halloweenTheme = ThemeData(
+  final ThemeData halloweenTheme = ThemeData(
       colorScheme: ColorScheme.fromSwatch(
     primarySwatch: Colors.orange,
   ));
