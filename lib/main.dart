@@ -1,4 +1,5 @@
 
+import 'package:demo_drift_package/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'constants/strings.dart';
 import 'screens/home_page.dart';
@@ -13,7 +14,10 @@ void main() {
 }
 
 // create provider we will be able to use everywhere on app
-final todoDBProvider = Provider.autoDispose((ref) => TodoDatabase()); // autodispose -> avoid unnecessary cost and restore state when provider is no longer in use
+final todoDBProvider = 
+Provider.autoDispose((ref) => TodoDatabase()); 
+// autodispose -> avoid unnecessary cost and 
+// restore state when provider is no longer in use
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,10 +28,10 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return MaterialApp(
+    return  MaterialApp(
       title: kAppTitle,
-      theme: ThemeData.dark(),
-      home: const HomePage(),
+      theme: AppThemes().lightTheme,//halloweenTheme,
+      home: HomePage(),
     );
     // Check your state management tool for lifecycles (i.e. initialized / alive/ paused/ disposed)
     // dispose: (context, db) => db.close(),
